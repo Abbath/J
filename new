@@ -1,0 +1,12 @@
+NB.#!/home/dan/j64-802/bin/jconsole -jprofile
+test2 =: 3 : '({.y) test ({:y)'
+
+test =:  4 : 0
+p =. (<(i.x); i.x) { (x, x) $ 0,~1 $~ <:# y
+a =. <./,p*|.*/~ y
+a
+)
+
+test2&.stdin ''
+exit ''
+
