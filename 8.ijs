@@ -15,7 +15,6 @@ eq=: >_1 0 0.01 0.05 0.1 0.5 1 3 5 10 20 30 50 70 100 300 500 1000;1 0 0.38 0.85
 
 
 edit_b0_button=: 3 : 0
-id_select (1!:2) 2
 Var=. ". Var1
 Q=. ". Q1
 H=. ". H1
@@ -34,11 +33,10 @@ elseif. V > 4 do.
   vert_st=. 2
 end.
 K=. 8$1
-K=. K ((<:5 8)})~ 13 14{vert_st{front_speed
-K=. K ((<:4)})~ wind_speed{~<:V
-NB. len=. #0{>items
-index=. 0 ". id_select NB. I.*./|:(>items)="1[id,' '$~len-#id
-K=. K ((<:1 2 3)})~ 1 2 3{,index{shits
+K=. (13 14{vert_st{front_speed)(<:5 8)}K
+K=. (wind_speed{~<:V)(<:4)}K
+index=. 0 ". id_select
+K=. (p{,index{shits)(<:p=.1 2 3)}K
 if. H > 0.25 do.
   h=. H-0.2
 else.
@@ -46,11 +44,13 @@ else.
 end.
 d=. 0{,index{shits
 Q_E1=. Q * */K{~<:1 3 5 7
-if. 0=$Q_E1 i.~0{eq do.
-  index=. I.*./|:0 1="1[2+\Q_E1<0{eq
-  G_1=. (index{V{eq)+(-~/ix{V{eq)*(Q_E1-index{0{eq)%(-~/(ix=. index,>:index){0{eq)
+e0=. 0{eq
+ve=. V{eq
+if. 0=$Q_E1 i.~e0 do.
+  index=. I.*./|:0 1="1[2+\Q_E1<e0
+  G_1=. (index{ve)+(-~/ix{ve)*(Q_E1-index{e0)%(-~/(ix=. index,>:index){e0)
 else.
-  G_1=. (Q_E1 i.~0{eq){V{eq
+  G_1=. (Q_E1 i.~e0){ve
 end.
 T=. h * d % */K{~<:2 4 7
 N=. 4
@@ -61,12 +61,12 @@ elseif. N > T do.
 elseif. T < 1.0 do.
   K=. 1 (<:6)} K
 end.
-Q_E2=. d %~ h %~ Q * */(1-(<:1){K),K{~<:2 3 4 5 6 7
-if. 0=$I.Q_E2=0{eq do.
-  index=. I.*./|:0 1="1[2+\Q_E2<0{eq
-  G_2=. (index{V{eq)+(-~/ix{V{eq)*(Q_E2-index{0{eq)%(-~/(ix=. index,>:index){0{eq)
+Q_E2=. d %~ h %~ Q * */(1-K{~<:1),K{~<:2 3 4 5 6 7
+if. 0=$I.Q_E2=e0 do.
+  index=. I.*./|:0 1="1[2+\Q_E2<e0
+  G_2=. (index{ve)+(-~/ix{ve)*(Q_E2-index{e0)%(-~/(ix=. index,>:index){e0)
 else.
-  G_2=. (Q_E2 i.~0{eq){V{eq
+  G_2=. (Q_E2 i.~e0){ve
 end.
 'G_12 G_21'=. \:~G_2,G_1
 G_r=. G_12+-:G_21
@@ -75,7 +75,7 @@ G_p=. N * V_p
 G_pzhz=. G_r <. G_p
 Y=. 0.6 0.75 0.95{~<:vert_st
 W_pzhz=. 0.3 * G_pzhz^Y
-S_pzhz=. */((<:8){K),(N^0.2),*:G_pzhz
+S_pzhz=. */(K{~<:8),(N^0.2),*:G_pzhz
 if. V <: 0.5 do.
   F=. 360
 elseif. (>&0.5*.<:&1) V do.
