@@ -32,8 +32,8 @@ elseif. (>&2*.<:&4) V do.
   vert_st=. X{T_a{air_two
 end.
 K=. 8$1
-K=. (13 14{vert_st{front_speed)(<:5 8)}K
-K=. (wind_speed{~<:V)(<:4)}K
+K=. (13 14{vert_st{front_speed)(4 7)}K
+K=. (wind_speed{~<:V)3}K
 index=. 0 ". id_select
 K=. (p{,index{shits)(<:p=.1 2 3)}K
 h=. (H>0.25){0.05,H-0.2 
@@ -41,24 +41,24 @@ d=. 0{,index{shits
 Q_E1=. Q * */K{~+:i.4
 e0=. 0{eq
 ve=. V{eq
+idx =. 13 : 'I.*./|:0 1="1[2+\y<x'
 if. 0=$Q_E1 i.~e0 do.
-  index=. I.*./|:0 1="1[2+\Q_E1<e0
-  G_1=. (index{ve)+(-~/ix{ve)*(Q_E1-index{e0)%(-~/(ix=. index,>:index){e0)
+  G_1=. (ix{ve)+(-~/ix{ve)*(Q_E1-ix{e0)%(-~/(ix,>:ix=.e0 idx Q_E1){e0)
 else.
-  G_1=. (Q_E1 i.~e0){ve
+  G_1=. ve{~Q_E1 i.~e0
 end.
 T=. h * d % */K{~1 3 6
 N=. 4
 if. N ~: T do.
   K=. (0.8^~N<.T) (<:6)} K
 elseif. T < 1.0 do.
-  K=. 1 (<:6)} K
+  K=. 1(5})K
 end.
-Q_E2=. d %~ h %~ Q * */(1-K{~<:1),K{~1+i.6
+Q_E2=. d %~ h %~ Q * */(1-K{~0),K{~1+i.6
 if. 0=$I.Q_E2=e0 do.
-  G_2=. (index{ve)+(-~/ix{ve)*(Q_E2-index{e0)%(-~/(ix=. index,>:index=.I.*./|:0 1="1[2+\Q_E2<e0){e0)
+  G_2=. (ix{ve)+(-~/ix{ve)*(Q_E2-ix{e0)%(-~/(ix,>:ix=.e0 idx Q_E2){e0)
 else.
-  G_2=. (Q_E2 i.~e0){ve
+  G_2=. ve{~Q_E2 i.~e0
 end.
 'G_12 G_21'=. \:~G_2,G_1
 G_r=. G_12+-:G_21
