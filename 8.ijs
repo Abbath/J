@@ -25,25 +25,20 @@ X=. ". X1
 T_a=. ". T_a1
 L=. ". L1
 ZIZ=. ". ZIZ1
+vert_st =. 2
 if. V <: 2 do.
   vert_st=. X{T_a{air_one
 elseif. (>&2*.<:&4) V do.
   vert_st=. X{T_a{air_two
-elseif. V > 4 do.
-  vert_st=. 2
 end.
 K=. 8$1
 K=. (13 14{vert_st{front_speed)(<:5 8)}K
 K=. (wind_speed{~<:V)(<:4)}K
 index=. 0 ". id_select
 K=. (p{,index{shits)(<:p=.1 2 3)}K
-if. H > 0.25 do.
-  h=. H-0.2
-else.
-  h=. 0.05
-end.
+h=. (H>0.25){0.05,H-0.2 
 d=. 0{,index{shits
-Q_E1=. Q * */K{~<:1 3 5 7
+Q_E1=. Q * */K{~+:i.4
 e0=. 0{eq
 ve=. V{eq
 if. 0=$Q_E1 i.~e0 do.
@@ -52,19 +47,16 @@ if. 0=$Q_E1 i.~e0 do.
 else.
   G_1=. (Q_E1 i.~e0){ve
 end.
-T=. h * d % */K{~<:2 4 7
+T=. h * d % */K{~1 3 6
 N=. 4
-if. N < T do.
-  K=. (N^0.8) (<:6)} K
-elseif. N > T do.
-  K=. (T^0.8) (<:6)} K
+if. N ~: T do.
+  K=. (0.8^~N<.T) (<:6)} K
 elseif. T < 1.0 do.
   K=. 1 (<:6)} K
 end.
-Q_E2=. d %~ h %~ Q * */(1-K{~<:1),K{~<:2 3 4 5 6 7
+Q_E2=. d %~ h %~ Q * */(1-K{~<:1),K{~1+i.6
 if. 0=$I.Q_E2=e0 do.
-  index=. I.*./|:0 1="1[2+\Q_E2<e0
-  G_2=. (index{ve)+(-~/ix{ve)*(Q_E2-index{e0)%(-~/(ix=. index,>:index){e0)
+  G_2=. (index{ve)+(-~/ix{ve)*(Q_E2-index{e0)%(-~/(ix=. index,>:index=.I.*./|:0 1="1[2+\Q_E2<e0){e0)
 else.
   G_2=. (Q_E2 i.~e0){ve
 end.
@@ -105,7 +97,7 @@ index_r=. I.*./|:(>regions)="1[reg,' '$~len-#reg
 len=. #0{>lands
 index_l=. I.*./|:(>lands)="1[lan,' '$~len-#lan
 cost=. index_l{,index_r{reg_costs
-P_l=. cost * S_pzhz * 100
+P_l=. */cost,S_pzhz,100
 Z=. H_r + P_l
 
 wd 'set h1 text ',":h
