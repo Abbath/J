@@ -187,195 +187,103 @@ wd 'bin z'
 wd 'cc b0 button'
 wd 'bin h'
 
+wd 'bin h'
+
 wd 'bin v'
 
-wd 'bin h'
 wd 'cc Q_E1 static left'
-wd 'cc Q_E11 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Q_E2 static left'
-wd 'cc Q_E21 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Г1 static left'
-wd 'cc G_11 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Г2 static left'
-wd 'cc G_21 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Гр static left'
-wd 'cc G_r1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Гп static left'
-wd 'cc G_p1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Г12 static left'
-wd 'cc G_121 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Г21 static left'
-wd 'cc G_211 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Гпзхз static left'
-wd 'cc G_pzhz1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Шпзхз static left'
-wd 'cc W_pzhz1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Sпзхз static left'
-wd 'cc S_pzhz1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Sзмхз static left'
-wd 'cc S_zmhz1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc t_під static left'
-wd 'cc t_pid1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc t_ур static left'
-wd 'cc t_ur1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc відкр static left'
-wd 'cc open1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc закр(Nт) static left'
-wd 'cc close1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Nл static left'
-wd 'cc M_l1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Nі static left'
-wd 'cc M_s1 edit left readonly'
+wd 'cc Nс static left'
 wd 'bin z'
 
-wd 'bin h'
-wd 'cc Nс static left'
+
+wd 'bin v'
+wd 'cc Q_E11 edit left readonly'
+wd 'cc Q_E21 edit left readonly'
+wd 'cc G_11 edit left readonly'
+wd 'cc G_21 edit left readonly'
+wd 'cc G_r1 edit left readonly'
+wd 'cc G_p1 edit left readonly'
+wd 'cc G_121 edit left readonly'
+wd 'cc G_211 edit left readonly'
+wd 'cc G_pzhz1 edit left readonly'
+wd 'cc W_pzhz1 edit left readonly'
+wd 'cc S_pzhz1 edit left readonly'
+wd 'cc S_zmhz1 edit left readonly'
+wd 'cc t_pid1 edit left readonly'
+wd 'cc t_ur1 edit left readonly'
+wd 'cc open1 edit left readonly'
+wd 'cc close1 edit left readonly'
+wd 'cc M_l1 edit left readonly'
+wd 'cc M_s1 edit left readonly'
 wd 'cc M_d1 edit left readonly'
 wd 'bin z'
 
 wd 'bin z'
+
+
+wd 'bin h'
+
 wd 'bin v'
-
-wd 'bin h'
 wd 'cc Hр static left'
-wd 'cc H_r1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Pл static left'
-wd 'cc P_l1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Bтрр static left'
-wd 'cc B_trr1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Bдп static left'
-wd 'cc B_dp1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Bвтг static left'
-wd 'cc B_tg1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc З static left'
-wd 'cc Z1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc K1 static left'
-wd 'cc K11 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc K2 static left'
-wd 'cc K21 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc K3 static left'
-wd 'cc K31 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc K4 static left'
-wd 'cc K41 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc K5 static left'
-wd 'cc K51 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc K6 static left'
-wd 'cc K61 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc K7 static left'
-wd 'cc K71 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc K8 static left'
-wd 'cc K81 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc d static left'
-wd 'cc d1 edit left readonly'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc h static left'
-wd 'cc h1 edit left'
-wd 'bin z'
-
-wd 'bin h'
 wd 'cc Ф static left'
+wd 'bin p18z'
+
+wd 'bin v'
+wd 'cc H_r1 edit left readonly'
+wd 'cc P_l1 edit left readonly'
+wd 'cc B_trr1 edit left readonly'
+wd 'cc B_dp1 edit left readonly'
+wd 'cc B_tg1 edit left readonly'
+wd 'cc Z1 edit left readonly'
+wd 'cc K11 edit left readonly'
+wd 'cc K21 edit left readonly'
+wd 'cc K31 edit left readonly'
+wd 'cc K41 edit left readonly'
+wd 'cc K51 edit left readonly'
+wd 'cc K61 edit left readonly'
+wd 'cc K71 edit left readonly'
+wd 'cc K81 edit left readonly'
+wd 'cc d1 edit left readonly'
+wd 'cc h1 edit left'
 wd 'cc F1 edit left readonly'
 wd 'bin z'
 
+wd 'bin z'
+wd 'bin z'
+
 wd 'set b0 text Розрахувати'
-wd 'bin z'
-wd 'bin z'
-wd 'bin z'
 
 wd 'set Q1 value 60'
 wd 'set H1 value 1.0'
@@ -403,4 +311,3 @@ wd 'pclose'
 
 
 edit ''
-
